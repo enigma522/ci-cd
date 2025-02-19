@@ -40,6 +40,7 @@ sudo systemctl status jenkins --no-pager
 
 echo "🔑 Adding Jenkins user to Docker group..."
 sudo usermod -aG docker jenkins
+newgrp docker
 
 echo "🔄 Restarting Jenkins to apply Docker permissions..."
 sudo systemctl restart jenkins
